@@ -27,11 +27,27 @@ $(document).ready(() => {
 //do not touch because it works!!!!!!
   $("#addTransactionButton").on("click", function() { 
     currentUser.transaction = {
-          itemCategory:$("#item_category").val(),
+          itemCategory:$("#item_category :selected").val(), //how to pull value from a dropdown
           itemName:$("#item_name").val(), 
           itemPrice:$("#item_price").val()
+
+
     }
+
+    let addHTML = (`
+    <div class="${currentUser.transaction.itemCategory}">
+      <i id="${currentUser.transaction.itemCategory}"></i>
+      <div id="">${currentUser.transaction.itemName}</div>
+      <div id="">${currentUser.transaction.itemPrice}</div>
+    </div>
+    `);
+
+    console.log(addHTML);
     console.log(currentUser); 
+  
+
+    $(".detailedViewWrapper").append(addHTML); 
+
   }); 
 
 
