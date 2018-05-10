@@ -5,13 +5,13 @@
 $(document).ready(() => {
 
 
-  class transaction {
+  class transaction { //when data is put in pop-up box, input values assigned
     constructor(itemCategory, itemName, itemPrice) {
       this.itemCategory = itemCategory;
       this.itemName = itemName;
       this.itemPrice = itemPrice;
     }
-  }
+  }//closing class transation block 
  
   class user {
     constructor(transaction) {
@@ -19,15 +19,25 @@ $(document).ready(() => {
     }
  
     add(info) {
-      // Adds the new contact into the Address Book
+      // pushing transaction info to transaction array 
       let newTransaction = new transaction(info.itemCategory, info.itemName, info.itemPrice);
       this.transaction.push(newTransaction);
     }
-  }
+  } //closes class user block 
+//do not touch because it works!!!!!!
+  $("#addTransactionButton").on("click", function() { 
+    currentUser.transaction = {
+          itemCategory:$("#item_category").val(),
+          itemName:$("#item_name").val(), 
+          itemPrice:$("#item_price").val()
+    }
+    console.log(currentUser); 
+  }); 
 
 
-  // let currentTransaction = new transaction("", "", 50);
-  // let currentUser = new user(currentTransaction);
+
+  let currentTransaction = new transaction("", "", 50);
+  let currentUser = new user(currentTransaction);
 
   console.log(currentUser);
 
@@ -57,19 +67,12 @@ $(document).ready(() => {
     // a user hovers over an element.
   }
 
-  $("#popUpButton").on("click", function() {
-    $("#popUp").fadeIn(500); 
-  }); 
+  // $("#popUpButton").on("click", function() {
+  //   $("#popUpButton").fadeIn(500); 
+  // }); 
 
-  $("#addTransaction").on("click", function() {
-    currentUser.transaction = {
-          itemCategory:$("#item_category").val(),
-          itemName:$("#item_name").val(), 
-          itemPrice:$("#item_price").val()
-    }
-  }); 
+
   
-
   function printTransactionToDisplay() {
     
     // TODO: print out a transaction to the detailed view <div>

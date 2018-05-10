@@ -70,22 +70,22 @@
  
    <footer>      
      <button class="swapView"  type = "button" >Detailed</button>
-     <button class="add" type="button" >Add</button>
+     <button id="popUpButton" class="add" type="button" >Add</button>
    </footer>
    <div class="popupFormContainer">
     <div class="popupFormContent">
       <h3 class="addPurchase">Add Purchase</h3>
       
-      <select name="expenseCategoryList">
+      <select id="item_category" name="expenseCategoryList">
           <option value="bills">Bills</option>
           <option value="shopping">Shopping</option>
           <option value="entertainment">Entertainment</option>
           <option value="food">Food</option>
           <option value="savings">Savings</option>
         </select>
-        <input type="text" placeholder="Item">
-        <input type="text" placeholder="Price">
-        <button class="submit" type="button" >Submit</button>
+        <input id="item_name" type="text" placeholder="Item">
+        <input id="item_price" type="text" placeholder="Price">
+        <button id="addTransactionButton" class="submit" type="button" >Submit</button>
     </div>
    </div>
   
