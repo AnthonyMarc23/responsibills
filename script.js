@@ -1,7 +1,6 @@
 "use strict";
 // TODO: Include jQuery and Bootstrap in HTML file
 
-
 // this is the jQuery preloader.
 $(document).ready(() => {
 
