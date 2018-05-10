@@ -151,7 +151,9 @@ outline:none;
 
 .material-icons {
     position: relative;
-    margin-left:89%;
+    left:89%;
+    
+     
 }
 
 
