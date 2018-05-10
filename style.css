@@ -33,16 +33,17 @@ h3{
     text-align: center;
     padding-bottom:15px;
 }
-/*Remaining Budget*/
-.remainingBudgetContainer {
-    margin-top: 40px;       
+/* .budgetFormContainer {
     display: flex;
     justify-content: center;
     align-items: center;
-    
-    
+} */
+/*Remaining Budget*/
+.remainingBudgetContainer {    
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
-
 .circleButton {
     background-color: aqua;
     width: 200px;
@@ -62,7 +63,6 @@ h3{
     align-items: center;
     font-size: 30px;
 } */
-
 .remainingBudget {
     display: flex;
     justify-content: center;
@@ -73,7 +73,7 @@ h3{
 /* Spent Snapshot */
 
 .spentSnapshot {
-    margin-top: 20px;
+    margin-top: 0px;
     padding: 25px;
     text-align: center;
 }
@@ -113,15 +113,14 @@ footer {
 }
 /************************* POP UP *******************/
 .popupFormContainer{
-     display:flex;
-     position:absolute;
-     top:30%;
-     left:30%;
-     background-color:red;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;  
-    
+     
+    width:335px;
+background-color:red; 
+    z-index:1; 
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
 }
  /* select {
      display:block;
@@ -148,7 +147,14 @@ outline:none;
 }
 .addPurchase {
     text-align: center;
-} */
+} 
+
+.material-icons {
+    position: relative;
+    margin-left:89%;
+}
+
+
 
 /* @media only screen and (min-width: 600px){
  body {

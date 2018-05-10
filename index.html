@@ -7,6 +7,9 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
   <title>Responsibills</title>
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet">
+      <!-- Added material Icons link -->
   <!-- Bootstrap Style Sheet-->
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
     crossorigin="anonymous">
@@ -47,18 +50,33 @@
       </div>
     </nav>
     <h1>Responsibills</h1> 
+    <div class="budgetFormContainer">
     <div class="remainingBudgetContainer">
       <p class="circleButton">Budget $50</p>
-
-
-
+    
     </div>
+     <!--POP UP FORM -->
+    <div class="popupFormContainer">
+      <div class="popupFormContent">
+        <h3 class="addPurchase">Add Purchase</h3>
+        <i class="material-icons">clear</i>
 
+        <select name="expenseCategoryList">
+          <option value="bills">Bills</option>
+          <option value="shopping">Shopping</option>
+          <option value="entertainment">Entertainment</option>
+          <option value="food">Food</option>
+          <option value="savings">Savings</option>
+        </select>
+        <input type="text" placeholder="item">
+        <input type="text" placeholder="$">
+        <button class="submit" type="button">Submit</button>
+      </div>
+    </div>
+    </div>
+   <!-- Closing budgetFormContainer  -->
 
-
-
-
-    <!-- <div class="spentSnapshot">
+     <div class="spentSnapshot">
       <h3>Spent Snapshot</h3>
       <div>
         <span>Bills</span>
@@ -80,7 +98,7 @@
         <span>Savings</span>
         <span>Spent:</span>
       </div>
-    </div> -->
+    </div>
 
 
       <!-- Detailed View Section -->
@@ -156,23 +174,7 @@
   
 
 
-<!--POP UP FORM -->
-    <div class="popupFormContainer">
-      <div class="popupFormContent">
-        <h3 class="addPurchase">Add Purchase</h3>
 
-        <select name="expenseCategoryList">
-          <option value="bills">Bills</option>
-          <option value="shopping">Shopping</option>
-          <option value="entertainment">Entertainment</option>
-          <option value="food">Food</option>
-          <option value="savings">Savings</option>
-        </select>
-        <input type="text" placeholder="item">
-        <input type="text" placeholder="$">
-        <button class="submit" type="button">Submit</button>
-      </div>
-    </div>
 
   </div> 
   <!--closing whitewraper -->
