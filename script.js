@@ -4,18 +4,34 @@
 // this is the jQuery preloader.
 $(document).ready(() => {
 
+
+  class transaction {
+    constructor(itemCategory, itemName, itemPrice) {
+      this.itemCategory = itemCategory;
+      this.itemName = itemName;
+      this.itemPrice = itemPrice;
+    }
+  }
+ 
   class user {
-    constructor(budget, name) {
-      this.budget=budget; 
-      this.name= name; 
-      this.transaction=transaction; 
-    } 
+    constructor(transaction) {
+      this.transaction = [transaction];
+    }
+ 
+    add(info) {
+      // Adds the new contact into the Address Book
+      let newTransaction = new transaction(info.itemCategory, info.itemName, info.itemPrice);
+      this.transaction.push(newTransaction);
+    }
   }
 
-  let currentUser = new user (getBudget(),"Johnny");
+
+  // let currentTransaction = new transaction("", "", 50);
+  // let currentUser = new user(currentTransaction);
+
+  console.log(currentUser);
 
 
-  const transaction={};
 
   function displayBudget() {
     // TODO: get the remaining budget and print it to the associated <div>
@@ -47,7 +63,7 @@ $(document).ready(() => {
 
   $("#addTransaction").on("click", function() {
     currentUser.transaction = {
-          categoryName:$("#item_category").val(),
+          itemCategory:$("#item_category").val(),
           itemName:$("#item_name").val(), 
           itemPrice:$("#item_price").val()
     }
