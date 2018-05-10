@@ -7,9 +7,14 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
   <title>Responsibills</title>
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet">
+      <!-- Added material Icons link -->
   <!-- Bootstrap Style Sheet-->
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
     crossorigin="anonymous">
+    <!-- Added two fonts -->
+    
   <!-- Custom CSS file -->
   <link href="style.css" rel="stylesheet">
 
@@ -46,16 +51,61 @@
         </ul>
       </div>
     </nav>
-    <h1>Responsibills</h1>
+    <h1>Responsibills</h1> 
+    <div class="budgetFormContainer">
     <div class="remainingBudgetContainer">
+<<<<<<< HEAD
       <p class="circleButton"></p>
+=======
+      <p class="circleButton">Budget $50</p>
+    
+>>>>>>> e15ae82d10806bb2ef9e5fb3bec0052f1fc4693e
+    </div>
+     <!--POP UP FORM -->
+    <div class="popupFormContainer">
+      <div class="popupFormContent">
+             
+              
+              <i class="material-icons">clear</i>
+               
+                <h3 class="addPurchase">Add Purchase</h3>
+                <select class="popupStyling" id="item_category" name="expenseCategoryList">
+                <option value="select">Select</option>
+                <option value="bills">Bills</option>
+                <option value="shopping">Shopping</option>
+                <option value="entertainment">Entertainment</option>
+                <option value="food">Food</option>
+                <option value="savings">Savings</option>
+              </select>
+              <input class="popupStyling" id="item_name" type="text" placeholder="Item">
+              <input class="popupStyling" id="item_price" type="text" placeholder="$">
+              <button  class="popupStyling" id="addTransactionButton" class="submit" type="button" >Submit</button>
+          </div>
+      
+        </div>  
+      <!-- <div class="popupFormContent">
+        <h3 class="addPurchase">Add Purchase</h3>
+        <i class="material-icons">clear</i>
+
+        <select name="expenseCategoryList">
+          <option value="bills">Bills</option>
+          <option value="shopping">Shopping</option>
+          <option value="entertainment">Entertainment</option>
+          <option value="food">Food</option>
+          <option value="savings">Savings</option>
+        </select>
+        <input type="text" placeholder="item">
+        <input type="text" placeholder="$">
+        <button class="submit" type="button">Submit</button>
+      </div>
+    </div> -->
+    <!-- Closing budgetFormContainer  -->
     </div>
 
 
+   
 
-
-
-    <!-- <div class="spentSnapshot">
+     <!-- <div class="spentSnapshot">
       <h3>Spent Snapshot</h3>
       <div>
         <span>Bills</span>
@@ -95,23 +145,7 @@
 
 
 <!--POP UP FORM -->
-    <div class="popupFormContainer">
-      <div class="popupFormContent">
-        <h3 class="addPurchase">Add Purchase</h3>
-
-        <select id="item_category" name="expenseCategoryList">
-          <option value="bills">Bills</option>
-          <option value="shopping">Shopping</option>
-          <option value="entertainment">Entertainment</option>
-          <option value="food">Food</option>
-          <option value="savings">Savings</option>
-        </select>
-        <input id="item_name" type="text" placeholder="Item">
-        <input id="item_price" type="text" placeholder="Price">
-        <button id="addTransactionButton" class="submit" type="button" >Submit</button>
-    </div>
-
-  </div> 
+    
   <!--closing whitewraper -->
 
 
