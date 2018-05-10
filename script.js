@@ -1,8 +1,21 @@
 "use strict";
-// TODO: Include jQuery and Bootstrap in HTML file
+
 
 // this is the jQuery preloader.
 $(document).ready(() => {
+
+  class user {
+    constructor(budget, name) {
+      this.budget=budget; 
+      this.name= name; 
+      this.transaction=transaction; 
+    } 
+  }
+
+  let currentUser = new user (getBudget(),"Johnny");
+
+
+  const transaction={};
 
   function displayBudget() {
     // TODO: get the remaining budget and print it to the associated <div>
@@ -28,36 +41,44 @@ $(document).ready(() => {
     // a user hovers over an element.
   }
 
-  function addTransaction() {
-    // TODO: open up a pop-up and get the category, item/service name
-    // and price spent on that item/service, then store it in an array
-  }
+  $("#popUpButton").on("click", function() {
+    $("#popUp").fadeIn(500); 
+  }); 
+
+  $("#addTransaction").on("click", function() {
+    currentUser.transaction = {
+          categoryName:$("#item_category").val(),
+          itemName:$("#item_name").val(), 
+          itemPrice:$("#item_price").val()
+    }
+  }); 
+  
 
   function printTransactionToDisplay() {
+    
     // TODO: print out a transaction to the detailed view <div>
   }
 
   function getBudget() {
+    let budget = 100; 
+    return budget; 
     // TODO: get the user's budget for the week and store it somewhere
+    
   }
 
-  /*
-  TODO: We need arrays/classes/objects for the following items:
-    
-    transaction = {
-      name,
-      category,
-      price
-    }
+  
+ // TODO: We need arrays/classes/objects for the following items:
+   
 
-    user = {
-      budget: value,
-      name: name,
-    }
+   
 
     
 
 
-   */
+   
 
 });
+
+
+//WishList: 
+//Delete an item 
