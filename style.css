@@ -12,7 +12,9 @@ body {
 
     
 }
-
+p{
+    font-family: 'Quicksand', sans-serif;
+}
 
 .outerWhiteWraper {
     margin: 10% 10%;
@@ -28,10 +30,12 @@ body {
 
 h1 {
     text-align: center;
+    font-family: 'Yanone Kaffeesatz', sans-serif;
 }
 h3{
     text-align: center;
     padding-bottom:15px;
+    font-family: 'Yanone Kaffeesatz', sans-serif;
 }
 /* .budgetFormContainer {
     display: flex;
@@ -45,7 +49,7 @@ h3{
     align-items: center;
 }
 .circleButton {
-    background-color: aqua;
+    background-color:#5CF64A;
     width: 200px;
     height: 200px;  
     border-radius: 50%;
@@ -87,10 +91,15 @@ footer {
 .swapView {
     width: 30%;
     padding: 5px;
+    background-color:#5CF64A;
+    font-family: 'Quicksand', sans-serif;
 }
 .add {
     width: 30%;
     padding: 5px;
+    background-color:;
+    font-family: 'Quicksand', sans-serif;
+    background-color:#5CF64A;
 }
 
 /************************* DETAILED VIEW *************/
@@ -113,19 +122,50 @@ footer {
 }
 /************************* POP UP *******************/
 .popupFormContainer{
-     
+     height: 550px; 
     width:335px;
-background-color:red; 
+background-color:gray; 
     z-index:1; 
     position: absolute;
-    top: 50%;
+    top: 65%;
     left: 50%;
     transform: translate(-50%,-50%);
 }
  /* select {
-     display:block;
+     display:block; 
      margin:
  } */
+
+.popupFormContent {
+    display: flex; 
+    justify-content: center; 
+    align-items: center; 
+    flex-direction: column; 
+}
+
+ .popupStyling {
+    margin: 10px;
+    background-color:rgb(125, 187, 118);
+    outline-color: white;
+
+ }
+
+ #item_category{
+    font-family: 'Quicksand', sans-serif;
+    outline-color: white;
+ }
+ 
+    
+
+ #addTransactionButton {
+    background-color:#5CF64A;
+    padding: 5px; 
+    border-radius: 5%; 
+    font-family: 'Quicksand', sans-serif;
+    outline-color: white;
+ }
+
+
  input,select,.submit {
      display:block;
     margin:0 auto;
@@ -151,9 +191,8 @@ outline:none;
 
 .material-icons {
     position: relative;
-    left:89%;
-    
-     
+   left:45%; 
+   margin-top: 22px;
 }
 
 
