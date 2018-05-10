@@ -113,17 +113,38 @@ footer {
 }
 /************************* POP UP *******************/
 .popupFormContainer{
-    display: none;
-    display: flex;
+     display:flex;
+     position:absolute;
+     top:30%;
+     left:30%;
+     background-color:red;
+    flex-direction: column;
     justify-content: center;
-    align-items: center;
+    align-items: center;  
+    
 }
-/* input {
-    margin: 10px;
+ /* select {
+     display:block;
+     margin:
+ } */
+ input,select,.submit {
+     display:block;
+    margin:0 auto;
+    border:1px;
+    padding:0.5%; 
+    width:70%;
 }
 option {
     margin: 10px;
 
+}
+
+.submit {
+background-color: aqua;
+outline:none;
+}
+.currencyinput {
+    border: 1px inset #ccc;
 }
 .addPurchase {
     text-align: center;
