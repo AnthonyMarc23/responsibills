@@ -40,6 +40,15 @@ $(document).ready(() => {
   displayBudget(currentUser.budget);
   console.log(currentUser.budget);
 
+  $(".add").on("click", function() {
+    console.log('hello');
+    $(".popupFormContainer").fadeIn(500); 
+  }); 
+
+  $("#popUpClose").on("click", function() {
+    $(".popupFormContainer").fadeOut(500);
+  });
+
   $("#addTransactionButton").on("click", function() { 
     currentUser.transaction = {
           itemCategory:$("#item_category :selected").val(), //how to pull value from a dropdown
@@ -89,13 +98,7 @@ $(document).ready(() => {
     // a user hovers over an element.
   }
 
-  $("#popUpButton").on("click", function() {
-    $(".popupFormContainer").fadeIn(500); 
-  }); 
-
-  $("#popUpClose").on("click", function() {
-    $(".popupFormContainer").fadeOut(500);
-  });
+ 
 
   
 

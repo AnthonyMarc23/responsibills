@@ -7,14 +7,13 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
   <title>Responsibills</title>
-  <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
-      rel="stylesheet">
-      <!-- Added material Icons link -->
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <!-- Added material Icons link -->
   <!-- Bootstrap Style Sheet-->
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
-    crossorigin="anonymous">
-    <!-- Added two fonts -->
-    
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4" crossorigin="anonymous">
+
+  <!-- Added two fonts -->
+
   <!-- Custom CSS file -->
   <link href="style.css" rel="stylesheet">
 
@@ -51,57 +50,42 @@
         </ul>
       </div>
     </nav>
-    <h1>Responsi<span class="logoBills">Bills</span></h1> 
+    <h1>Responsi
+      <span class="logoBills">Bills</span>
+    </h1>
     <div class="budgetFormContainer">
-    <div class="remainingBudgetContainer">
-      <p class="circleButton"></p>
-    </div>
-     <!--POP UP FORM -->
-    <!-- <div class="popupFormContainer">
-      <div class="popupFormContent">
-             
-              
-              <i class="material-icons">clear</i>
-               
-                <h3 class="addPurchase">Add Purchase</h3>
-                <select class="popupStyling" id="item_category" name="expenseCategoryList">
-                <option value="select">Select</option>
-                <option value="bills">Bills</option>
-                <option value="shopping">Shopping</option>
-                <option value="entertainment">Entertainment</option>
-                <option value="food">Food</option>
-                <option value="savings">Savings</option>
-              </select>
-              <input class="popupStyling" id="item_name" type="text" placeholder="Item">
-              <input class="popupStyling" id="item_price" type="text" placeholder="$">
-              <button  class="popupStyling" id="addTransactionButton" class="submit" type="button" >Submit</button>
-          </div>
-      
-        </div>  
-
-      <!-- <div class="popupFormContent">
-        <h3 class="addPurchase">Add Purchase</h3>
-        <i class="material-icons">clear</i>
-
-        <select name="expenseCategoryList">
-          <option value="bills">Bills</option>
-          <option value="shopping">Shopping</option>
-          <option value="entertainment">Entertainment</option>
-          <option value="food">Food</option>
-          <option value="savings">Savings</option>
-        </select>
-        <input type="text" placeholder="item">
-        <input type="text" placeholder="$">
-        <button class="submit" type="button">Submit</button>
+      <div class="remainingBudgetContainer">
+        <p class="circleButton"></p>
       </div>
-    </div> -->
-    <!-- Closing budgetFormContainer  -->
+      <!--POP UP FORM -->
+      <div class="popupFormContainer hidden">
+        <div class="popupFormContent">
+
+
+          <i id = "popUpClose" class="material-icons">clear</i>
+
+          <h3 class="addPurchase">Add Purchase</h3>
+          <select class="popupStyling" id="item_category" name="expenseCategoryList">
+            <option value="select">Select</option>
+            <option value="bills">Bills</option>
+            <option value="shopping">Shopping</option>
+            <option value="entertainment">Entertainment</option>
+            <option value="food">Food</option>
+            <option value="savings">Savings</option>
+          </select>
+          <input class="popupStyling" id="item_name" type="text" placeholder="Item">
+          <input class="popupStyling" id="item_price" type="text" placeholder="$">
+          <button class="popupStyling" id="addTransactionButton" class="submit" type="button">Submit</button>
+        </div>
+
+      </div>
+
     </div>
 
 
-   
 
-     <!-- <div class="spentSnapshot">
+
+    <!-- <div class="spentSnapshot">
       <h3>Spent Snapshot</h3>
       <div>
         <span>Bills</span>
@@ -126,38 +110,36 @@
     </div> -->
 
 
-      <!-- Detailed View Section -->
-      <div class="detailedViewWrapper">
+    <!-- Detailed View Section -->
+    <div class="detailedViewWrapper">
       <h3>Weekly Expenses</h3>
-    
-      </div> <!-- End detailedViewWrapper-->
+
+    </div>
+    <!-- End detailedViewWrapper-->
 
     <footer>
       <button id="filterTransactionButton" type="button">Detailed</button>
       <button class="add" type="button">Add</button>
     </footer>
 
-  
-
-
-<!--POP UP FORM -->
-    
-  <!--closing whitewraper -->
 
 
 
+    <!--POP UP FORM -->
+
+    <!--closing whitewraper -->
 
 
 
-  <!-- Bootstrap JS-->
-  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
-    crossorigin="anonymous"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
-    crossorigin="anonymous"></script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
-    crossorigin="anonymous"></script>
-  <!-- Custom JS-->
-  <!-- <script src="script.js"></script> -->
+
+
+
+    <!-- Bootstrap JS-->
+    <script src="https://code.jquery.com/jquery-3.3.1.js" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js" integrity="sha384-cs/chFZiN24E4KMATLdqdvsezGxaGsi4hLGOzlXwp5UZB1LY//20VyM2taTB4QvJ" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js" integrity="sha384-uefMccjFJAIv6A+rW+L4AHf99KvxDjWSu1z9VI8SKNVmz4sk7buKt/6v9KI65qnm" crossorigin="anonymous"></script>
+ <!-- Custom JS-->
+    <script src="script.js"></script>
 
 </body>
 

@@ -123,12 +123,56 @@ footer {
     color: black;
 }
 /************************* POP UP *******************/
+.hidden {
+    display: none; 
+}
 .popupFormContainer{
-    display: none;
-    display: flex;
+    /* display: none; */
+    /* display: flex; */
     justify-content: center;
     align-items: center;
+    position: fixed; 
+    background-color: gray; 
+    transform: translate(20%,-130%);
+    z-index:1;
+    /* top: 50%; */
+    /* left: 50%; */
+    /* margin-top: -100px; Negative half of height. */
+    /* margin-left: -250px; Negative half of width. */
 }
+
+.popupFormContent {
+        display: flex; 
+        justify-content: center; 
+        align-items: center; 
+        flex-direction: column; 
+        
+
+    }
+    
+     .popupStyling {
+        margin: 10px;
+        background-color:rgb(125, 187, 118);
+        outline-color: white;
+    
+     }
+    
+     #item_category{
+        font-family: 'Quicksand', sans-serif;
+        outline-color: white;
+     }
+     
+        
+    
+     #addTransactionButton {
+        background-color:#5CF64A;
+        padding: 5px; 
+        border-radius: 5%; 
+        font-family: 'Quicksand', sans-serif;
+        outline-color: white;
+    }
+
+
 /* input {
     margin: 10px;
 }
