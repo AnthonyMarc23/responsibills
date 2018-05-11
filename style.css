@@ -4,7 +4,7 @@
 }
 /* Main Elements */
 body {
-    background-image: url(../img/backgroundImg900x725Dark.jpg);
+    background-image: url("img/backgroundImg900x725Dark.jpg");
     background-attachment: fixed;
     background-repeat: no-repeat;   
     
