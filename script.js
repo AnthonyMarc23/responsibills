@@ -40,14 +40,29 @@ $(document).ready(() => {
   displayBudget(currentUser.budget);
   console.log(currentUser.budget);
 
+
+  //popup for add button
   $(".add").on("click", function() {
     console.log('hello');
     $(".popupFormContainer").fadeIn(500); 
   }); 
 
+  
   $("#popUpClose").on("click", function() {
     $(".popupFormContainer").fadeOut(500);
   });
+
+
+  //popup for filter button 
+  $("#filterTransactionButton").on("click", function() {
+    console.log('hello');
+    $(".filterContainer").fadeIn(500);  
+  }); 
+
+  $("#closeFilterPopup").on("click", function() {
+    $(".filterContainer").fadeOut(500);
+  });
+
 
   $("#addTransactionButton").on("click", function() { 
     currentUser.transaction = {
@@ -82,7 +97,7 @@ $(document).ready(() => {
   }
 
   $("#filterTransactionButton").on("click", function(){
-    $(".detailedViewWrapper").hide()
+  
 
     /*
     if class box is checked, then $("class").toggle();
@@ -100,7 +115,13 @@ $(document).ready(() => {
 
  
 
-  
+  $('input').click(function() {
+    var category = $(this).val();
+
+    if (!$(this).attr('checked')) $('.' + category).hide();
+    else $('.' + category).show();
+
+});
 
 
   
