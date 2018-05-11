@@ -100,7 +100,12 @@ footer {
     font-family: 'Quicksand', sans-serif;
     background-color:#5CF64A;
 }
-
+ #filterTransactionButton {
+    width: 30%;
+    padding: 5px;
+    font-family: 'Quicksand', sans-serif;
+    background-color:#5CF64A;
+ }
 /************************* DETAILED VIEW *************/
 .detailedViewWrapper {
     /* margin-top: 45px; */
