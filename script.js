@@ -85,6 +85,9 @@ $(document).ready(() => {
 
   }); 
 
+
+
+
   function displayBudget(budget) {
     $(".circleButton").text(`Budget: $${budget}`);
     // TODO: get the remaining budget and print it to the associated <div>
@@ -113,19 +116,39 @@ $(document).ready(() => {
     // a user hovers over an element.
   }
 
- 
+//   $(document).click((e) => {
+//  // If the element we are clicking on has a class of delete...
+//  if ($(e.target).hasClass.on("click",":checkbox")) {
+//    // If the parent of the element has an attribute of "customer-id" that is the same value as "Adam"...
+   
+//    }
+//  }
+// });
 
-  $('input').click(function() {
-    var category = $(this).val();
 
-    if (!$(this).attr('checked')) $('.' + category).hide();
-    else $('.' + category).show();
+ // Find all the checkboxes and see if they have been clicked on
+  $(':checkbox').on("click", function() {
+   
+    // create a variable called "category" and save the value of what was clicked on using "this"    
+        let category = $(this).val();
+    
+    // Check the state of the checkbox
+       if (!$(this).attr('checked')){
+    
+    // find all elements with the class of what was saved in the category variable, and run the hide function to hide those elements
+            $('.' + category).hide();
+        } else {
+    
+    // Else, find all elements with a class of what was saved in the category variable, and run the function to show those elements
+            $('.' + category).show();
+        }
+    });
 
 });
 
 
   
-});
+
 
 
 //WishList: 
