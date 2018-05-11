@@ -131,6 +131,7 @@ $(document).ready(() => {
    
     // create a variable called "category" and save the value of what was clicked on using "this"    
         let category = $(this).val();
+        console.log(category);
     
     // Check the state of the checkbox
        if (!$(this).attr('checked')){
@@ -143,6 +144,12 @@ $(document).ready(() => {
             $('.' + category).show();
         }
     });
+
+  $(".checkmark").click(function() {
+    //$(event.target).toggleClass()
+  })
+
+  //$('checkmark').toggleAttr( 'attr', 'new', 'old' );
 
 });
 
