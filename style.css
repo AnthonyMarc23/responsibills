@@ -32,7 +32,8 @@ h1 {
 .logoBills {
     color: #10B6F4;
 }
-h3{
+
+.outerWhiteWraper h3 {
     text-align: center;
     padding-bottom:15px;
     color: white;

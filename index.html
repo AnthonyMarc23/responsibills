@@ -88,50 +88,34 @@
 
     <!-- START ADD AND FILTER BUTTON-->
     <footer>
-      <button id="filterTransactionButton" type="button">Filter</button>
+      <button id="filterTransactionButton" onclick="openFilterPopUp();" type="button">Filter</button>
       <button class="add" type="button">Add</button>
     </footer>
     <!-- END ADD AND FILTER BUTTON-->
 
-<!-- START FILTER POP UP-->
-    <div class="filterContainer hidden">
-     
-    <h3>Filter by Category</h3>
-    <label class="container">Bills
-      <input type="checkbox" value="bills" title="unchecked">
-      <span class="checkmark"></span>
-    </label>
- 
-    <label class="container">Fashion
-      <input type="checkbox" value="fashion" title="unchecked">
-      <span class="checkmark"></span>
-    </label>
- 
-    <label class="container">Food
-      <input type="checkbox" value="food" title="unchecked">
-      <span class="checkmark"></span>
-    </label>
- 
-    <label class="container">Fun
-      <input type="checkbox" value="fun" title="unchecked">
-      <span class="checkmark"></span>
-    </label>
- 
-    <label class="container">Savings
-      <input type="checkbox" value="savings">
-      <span class="checkmark"></span>
-    </label>
- 
-    <button type="button" class="filterButton">Filter</button>
-    <button type="button" id="closeFilterPopup" class="filterButton">Close</button>
-  </div>
-<!-- END FILTER POP UP-->
 
  <!--closing whitewraper -->
 </div>
 
 
-   
+<div id="filterPopUp"class="modal" tabindex="-1" role="dialog">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">Filter by Category</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <h3>Filter Options</h3>
+        <section id="filterPopUpSectionOptions">
+
+        </section>
+      </div>
+    </div>
+  </div>
+</div>
 
    
 
