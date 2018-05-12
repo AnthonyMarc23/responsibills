@@ -6,11 +6,9 @@
 body {
     background-image: url("img/backgroundImg900x725Dark.jpg");
     background-attachment: fixed;
-    background-repeat: no-repeat;   
-    
-    background-size: cover;
-
-    
+    background-repeat: no-repeat;    
+    background-size: cover; 
+    font-family: 'Lato', sans-serif;
 }
 
 
@@ -23,49 +21,43 @@ body {
     padding: 10px;
     box-shadow: 0px 0px 20px #888888;
     opacity: 0.9;
-
 }
-
 h1 {
     text-align: center;
+    font-family: 'Luckiest Guy', cursive;
+    font-size: 35px;
+    margin-top: 15px;
+    
 }
-
 .logoBills {
-    color: rgb(15, 160, 15);
+    color: #10B6F4;
 }
 h3{
     text-align: center;
     padding-bottom:15px;
+    color: white;
 }
 /*Remaining Budget*/
+.budgetFormContainer {
+    margin-top: -15px;
+}
 .remainingBudgetContainer {
     margin-top: 40px;       
     display: flex;
     justify-content: center;
-    align-items: center;
-    
-    
+    align-items: center; 
 }
-
 .circleButton {
-    background-color: aqua;
+    background-color: #C6FF00;
     width: 200px;
     height: 200px;  
     border-radius: 50%;
     display: flex;
     justify-content: center;
     align-items: center;
-    font-size: 30px;
-    
+    font-size: 30px;   
 
 }
-
-/* .remainingBudgetHeading {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-size: 30px;
-} */
 
 .remainingBudget {
     display: flex;
@@ -74,105 +66,120 @@ h3{
     font-size: 30px;
 }
 
-/* Spent Snapshot */
-
-.spentSnapshot {
-    margin-top: 20px;
-    padding: 25px;
-    text-align: center;
-}
-/* Footer Buttons*/
+/****************************** FOOTER BUTTONS *****************/
 
 footer {
     display: flex;
     justify-content: space-evenly;
     padding-bottom: 5%;
 }
-.swapView {
-    width: 30%;
-    padding: 5px;
-}
+
 .add {
     width: 30%;
     padding: 5px;
-    font-family: 'Quicksand', sans-serif;
-    background-color:#5CF64A;
+    font-family: 'Quicksand', sans-serif;    
+    background-color: #10B6F4;
+    border: none;
+    border-radius: 3px;
 }
  #filterTransactionButton {
     width: 30%;
     padding: 5px;
     font-family: 'Quicksand', sans-serif;
-    background-color:#5CF64A;
+    background-color: #C600FF;
+    border: none;
+    border-radius: 3px;
  }
 /************************* DETAILED VIEW *************/
 .detailedViewWrapper {
     /* margin-top: 45px; */
     padding-bottom:10px;
 }
-
 .detailedView {
     display: flex;
     justify-content:space-evenly;
     align-items: center;
-
 }
-
 .icons {
     width:30px;
     height:30px;
     color: black;
 }
-/************************* POP UP *******************/
+
+/************************* POPUP FORM TO ADD PURCHASE *******************/
 .hidden {
     display: none; 
 }
-.popupFormContainer{
-    /* display: none; */
-    /* display: flex; */
+.popupFormContainer{    
     justify-content: center;
     align-items: center;
     position: fixed; 
     background-color: gray; 
     transform: translate(20%,-130%);
     z-index:1;
-    /* top: 50%; */
-    /* left: 50%; */
-    /* margin-top: -100px; Negative half of height. */
-    /* margin-left: -250px; Negative half of width. */
+    padding: 20px;
+}
+.popupFormContent {
+    display: flex; 
+    justify-content: center; 
+    align-items: center; 
+    flex-direction: column; 
+    
+
+}    
+.popupStyling {    
+    background-color:rgb(125, 187, 118);
+    outline-color: white;
+    width: 100%;
+    padding-right: 15px;
+    padding-left: 15px;
+    margin: 10px;
+    border: none;
+    height: 35px;
+
+
+}    
+#item_category {
+    font-family: 'Quicksand', sans-serif;
+    outline-color: white;
+}        
+    
+#addTransactionButton {
+    background-color:#5CF64A;
+    padding: 5px; 
+    border-radius: 3px; 
+    font-family: 'Quicksand', sans-serif;
+    border: none;
 }
 
-.popupFormContent {
-        display: flex; 
-        justify-content: center; 
-        align-items: center; 
-        flex-direction: column; 
-        
-
-    }
-    
-     .popupStyling {
-        margin: 10px;
-        background-color:rgb(125, 187, 118);
-        outline-color: white;
-    
-     }
-    
-     #item_category{
-        font-family: 'Quicksand', sans-serif;
-        outline-color: white;
-     }
-     
-        
-    
-     #addTransactionButton {
-        background-color:#5CF64A;
-        padding: 5px; 
-        border-radius: 5%; 
-        font-family: 'Quicksand', sans-serif;
-        outline-color: white;
-    }
-
 /****************************FILTER POPUP**********************/
+
+.filterContainer {   
+    position: fixed; 
+    background-color: gray; 
+    transform: translate(20%,-130%);
+    z-index:1;
+    padding: 20px;
+    border-radius: 3px;
+}
+   
+.filterButton {
+    background-color: #2196F3; /* Blue */
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 20px;  
+}   
+.filter {
+    width: 60px;
+    height: 60px;
+    margin: 5px;
+    float: left;
+    border: 2px blue solid;
+} 
 
 .container {
     display: block;
@@ -186,15 +193,13 @@ footer {
     -ms-user-select: none;
     user-select: none;
     
-  }
-  
+  }  
   /* Hide the browser's default checkbox */
   .container input {
     position: absolute;
     opacity: 0;
     cursor: pointer;
-  }
-  
+  }  
   /* Create a custom checkbox */
   .checkmark {
     position: absolute;
@@ -210,9 +215,9 @@ footer {
     background-color: #ccc;
   }
   
-  /* When the checkbox is checked, add a blue background */
+  /* When the checkbox is checked, add a pink background */
   .container input:checked ~ .checkmark {
-    background-color: #2196F3;
+    background-color: #FF00AB;
   }
   
   /* Create the checkmark/indicator (hidden when not checked) */
@@ -241,35 +246,6 @@ footer {
   }
  
   /* Filter Button on popup */
- .filterContainer {
-  /* border: 1px solid black; */
-  /* width: 30%; */
-  /* padding: 15px;
-  margin: 20px; */
-  position: fixed; 
-    background-color: gray; 
-    transform: translate(20%,-130%);
-    z-index:1;
- }
- 
-  .filterButton {
-    background-color: #2196F3; /* Blue */
-    border: none;
-    color: white;
-    padding: 15px 32px;
-    text-align: center;
-    text-decoration: none;
-    display: inline-block;
-    font-size: 20px;  
-  }
- 
-  .filter {
-    width: 60px;
-    height: 60px;
-    margin: 5px;
-    float: left;
-    border: 2px blue solid;
-  }
 
 
 /* input {

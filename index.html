@@ -12,19 +12,18 @@
   <!-- Bootstrap Style Sheet-->
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4" crossorigin="anonymous">
 
-  <!-- Added two fonts -->
-
+  <!-- Google Fonts fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Lato:700i|Luckiest+Guy" rel="stylesheet">
   <!-- Custom CSS file -->
   <link href="style.css" rel="stylesheet">
 
 
 </head>
-<!-- Testing Commit-->
-
 
 <body>
   <div class="outerWhiteWraper">
-    <nav class="navbar navbar-expand-lg navbar-light justify-content-center">
+    <!-- Start Navbar from bootstrap-->
+    <nav class="navbar navbar-expand-lg navbar-light justify-content-flex-end">
       <!--bg-light  -->
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown"
         aria-expanded="false" aria-label="Toggle navigation">
@@ -50,20 +49,19 @@
         </ul>
       </div>
     </nav>
-    <h1>Responsi
-      <span class="logoBills">Bills</span>
-    </h1>
+    <!-- End Navbar from Bootstrap-->
+
+    <h1>Responsi<span class="logoBills">Bills</span></h1>
+
     <div class="budgetFormContainer">
       <div class="remainingBudgetContainer">
         <p class="circleButton"></p>
       </div>
-      <!--POP UP FORM -->
+
+      <!--START POPUP FORM TO ADD PURCHASE -->
       <div class="popupFormContainer hidden">
         <div class="popupFormContent">
-
-
           <i id = "popUpClose" class="material-icons">clear</i>
-
           <h3 class="addPurchase">Add Purchase</h3>
           <select class="popupStyling" id="item_category" name="expenseCategoryList">
             <option value="select">Select</option>
@@ -75,18 +73,11 @@
           </select>
           <input class="popupStyling" id="item_name" type="text" placeholder="Item">
           <input class="popupStyling" id="item_price" type="text" placeholder="$">
-          <button class="popupStyling" id="addTransactionButton" class="submit" type="button">Submit</button>
+          <button class="popupStyling" id="addTransactionButton" class="submit" type="button">Add</button>
         </div>
-
-      </div>
+      </div> <!-- END POPUP FORM TO ADD PURCHASE-->
 
     </div>
-
-
-
-
-
-
 
     <!-- Detailed View Section -->
     <div class="detailedViewWrapper">
@@ -95,12 +86,14 @@
     </div>
     <!-- End detailedViewWrapper-->
 
+    <!-- START ADD AND FILTER BUTTON-->
     <footer>
       <button id="filterTransactionButton" type="button">Filter</button>
       <button class="add" type="button">Add</button>
     </footer>
+    <!-- END ADD AND FILTER BUTTON-->
 
-<!-- filtered popup-->
+<!-- START FILTER POP UP-->
     <div class="filterContainer hidden">
      
     <h3>Filter by Category</h3>
@@ -132,7 +125,7 @@
     <button type="button" class="filterButton">Filter</button>
     <button type="button" id="closeFilterPopup" class="filterButton">Close</button>
   </div>
-
+<!-- END FILTER POP UP-->
 
  <!--closing whitewraper -->
 </div>
