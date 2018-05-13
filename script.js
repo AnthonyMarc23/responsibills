@@ -87,9 +87,9 @@ class user {
   }
 
   // the setBudget method will save what a user enters for his weekly budget, hide the
-  // modal popup, and then run the displayBudget() method. Once again, we are using the
-  // parseFloat function to make sure that we are working with numbers and not another
-  // data type, say, a string, or an object.
+  // modal popup, and then run the displayBudget() and the displayItems() method. Once
+  // again, we are using the parseFloat function to make sure that we are working with
+  // numbers and not another data type, say, a string, or an object.
   setBudget() {
     this.transactions = [];
     this.budget = parseFloat($("#weeklyBudget").val());
