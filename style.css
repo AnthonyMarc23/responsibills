@@ -51,7 +51,7 @@ h1 {
     align-items: center; 
 }
 .circleButton {
-    background-color: #C6FF00;
+    background-color: #5CF64A;
     width: 200px;
     height: 200px;  
     border-radius: 50%;
@@ -79,23 +79,23 @@ h1 {
 }
 
 .bills {
-    background-color: rgb(168, 51, 51);
+    background-color: rgb(238, 10, 10);
 }
 
 .fashion {
-    background-color: rgb(189, 75, 189);
+    background-color: rgb(250, 42, 250);
 }
 
 .food {
-    background-color: rgb(194, 124, 59);
+    background-color: rgb(235, 130, 33);
 }
 
 .fun {
-    background-color: rgb(57, 96, 180);
+    background-color: rgb(9, 81, 236);
 }
 
 .savings {
-    background-color: rgb(78, 214, 78);
+    background-color: rgb(16, 250, 16);
 }
 
 /****************************** FOOTER BUTTONS *****************/
