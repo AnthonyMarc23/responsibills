@@ -20,6 +20,11 @@ class user {
       itemName: $("#item_name").val(), 
       itemPrice: parseFloat($("#item_price").val())
     };
+
+    if (transaction.itemCategory === "" || transaction.itemName === "" || isNaN(transaction.itemPrice)) {
+      return;
+    }
+
       $("#item_category :selected").val('');
       $("#item_name").val('');
       $("#item_price").val('');
