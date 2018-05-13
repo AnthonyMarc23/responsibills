@@ -52,10 +52,11 @@
     <!-- End Navbar from Bootstrap-->
 
     <h1>Responsi<span class="logoBills">Bills</span></h1>
+    <h6>Helping Young Adults to Budget Their Life!</h6>
 
     <div class="budgetFormContainer" onclick="$('#enterBudgetPopUp').modal('show');">
       <div class="remainingBudgetContainer">
-        <p class="circleButton"></p>
+        <p class="circleButton">Click Here To Get Started!</p>
       </div>
     </div>
 
@@ -76,7 +77,7 @@
 </div>
 
 <!-- BOOTSTRAP MODAL POPUP FOR FILTER -->
-<div id="filterPopUp" class="modal" tabindex="-1" role="dialog">
+<div id="filterPopUp" class="modal fade" tabindex="-1" role="dialog">
   <div class="modal-dialog" role="document">
     <div class="modal-content popupFormContainer">
       <div class="modal-header">
@@ -95,7 +96,7 @@
 </div>
 
 <!-- BOOTSTRAP MODAL POPUP FOR ADDING A TRANSACTION -->
-<div id="addTransactionPopUp"class="modal" tabindex="-1" role="dialog">
+<div id="addTransactionPopUp"class="modal fade" tabindex="-1" role="dialog">
   <div class="modal-dialog" role="document">
     <div class="modal-content popupFormContainer">
       <div class="modal-header">
@@ -113,8 +114,8 @@
           <option value="Food">Food</option>
           <option value="Savings">Savings</option>
         </select>
-        <input class="popupStyling" id="item_name" type="text" placeholder="Item">
-        <input class="popupStyling" id="item_price" type="text" placeholder="$">
+        <input class="form-control popupStyling" id="item_name" type="text" placeholder="Item">
+        <input class="form-control popupStyling" id="item_price" type="text" placeholder="$">
         
       </div>
       <div class="modal-footer">
@@ -126,7 +127,7 @@
 
 
 <!-- BOOTSTRAP MODAL POPUP FOR BUDGET -->
-<div id="enterBudgetPopUp" class="modal" tabindex="-1" role="dialog">
+<div id="enterBudgetPopUp" class="modal fade" tabindex="-1" role="dialog">
   <div class="modal-dialog" role="document">
     <div class="modal-content popupFormContainer">
       <div class="modal-header">
@@ -136,7 +137,7 @@
         </button>
       </div>
       <div class="modal-body">
-        <input type="text" id="weeklyBudget" placeholder="$">
+        <input type="text" class="form-control" id="weeklyBudget" placeholder="$">
       </div>
       <div class="modal-footer">
         <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>

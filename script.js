@@ -66,14 +66,14 @@ class user {
     
     // similarly, the map method is also iterating through each element of the
     // this.transactions, and on those that were true from the filter() method, we
-    // return the final html we are using and store all this information in the items
-    // variable we are initializing.
+    // return the final html we are using and store all this information in the 'items'
+    // variable from above we are initializing.
     .map(transaction => {
       return (`
       <div class="detailedView ${transaction.itemCategory.toLowerCase()}">
-      <img class="icons" src="icons/${transaction.itemCategory}.png"></i>
+      <img class="icons" src="icons/${transaction.itemCategory}.png">
       <div id="">${transaction.itemName}</div>
-      <div id="">${transaction.itemPrice}</div>
+      <div id="">$${transaction.itemPrice}</div>
       </div>
       `);
     });
@@ -91,9 +91,11 @@ class user {
   // parseFloat function to make sure that we are working with numbers and not another
   // data type, say, a string, or an object.
   setBudget() {
+    this.transactions = [];
     this.budget = parseFloat($("#weeklyBudget").val());
     $('#enterBudgetPopUp').modal('hide');
     this.displayBudget();
+    this.displayItems();
   }
 
   // getBudget() will update the user's budget with a fun little method called reduce(),
@@ -158,22 +160,25 @@ class user {
   }
 
   // the toggleFilter() function is literally a shorthand version of an if statement, called
-  // a ternary statement. This is saying, if the value of the 
+  // a ternary statement. This is saying, set the value of this.filter[category] to true
+  // if it's false, or false if it's true. 
   toggleFilter(category) {
     this.filter[category]=this.filter[category] ? false : true;
     this.displayItems();
   }
 
-
+  // here we are adding transactions to the transaction array of the class, and then use
+  // a push method to add it to the end of the array.
   add(info) {
     // pushing transaction info to transaction array 
     let newTransaction = new transaction(info.itemCategory, info.itemName, info.itemPrice);
     this.transaction.push(newTransaction);
   }
 
+  // the displayBudget() function writes the budget to the circleButton Div and is called
+  // each time a new transaction is added to keep the budget updated.
   displayBudget() {
     $(".circleButton").html(`Budget:<br>$${this.getBudget()}`);
-    // TODO: get the remaining budget and print it to the associated <div>
   }
 } //closes class user block 
 
@@ -185,7 +190,7 @@ $(document).ready(() => {
   window.currentUser = new user();
   
   //pop up the budget window first thing on load!
-  showPopUp("enterBudgetPopUp");
+  // showPopUp("enterBudgetPopUp");
 
   // run the buildCategories function.
   currentUser.buildCategories(); //

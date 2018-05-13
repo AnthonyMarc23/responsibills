@@ -20,7 +20,7 @@ body {
     border: 1px solid; 
     padding: 10px;
     box-shadow: 0px 0px 20px #888888;
-    opacity: 0.9;
+    opacity: 0.95;
 }
 h1 {
     text-align: center;
@@ -29,6 +29,13 @@ h1 {
     margin-top: 15px;
     
 }
+
+h6 {
+    text-align: center;
+    font-family: 'Pangolin', cursive;
+    font-size: 18px;
+}
+
 .logoBills {
     color: #10B6F4;
 }
@@ -52,6 +59,7 @@ h1 {
 }
 .circleButton {
     background-color: #5CF64A;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
     width: 200px;
     height: 200px;  
     border-radius: 50%;
@@ -73,29 +81,30 @@ h1 {
 /*************************** CATEGORY STYLING **************************/
 .bills, .fashion, .food, .fun, .savings {
     border-radius: 5px;
-    margin-bottom: 5px;
     width: 80%;
-    margin: 0 auto;
+    margin: 0 auto 10px auto;
+    box-shadow: 0 3px 8px 0 rgba(0, 0, 0, 0.2), 0 5px 10px 0 rgba(0, 0, 0, 0.19);
+
 }
 
 .bills {
-    background-color: rgb(238, 10, 10);
+    background-color: rgba(238, 10, 10, 0.5);
 }
 
 .fashion {
-    background-color: rgb(250, 42, 250);
+    background-color: rgba(250, 42, 250, 0.5);
 }
 
 .food {
-    background-color: rgb(235, 130, 33);
+    background-color: rgba(235, 131, 33, 0.5);
 }
 
 .fun {
-    background-color:#01dddd;
+    background-color:rgba(1, 221, 221, 0.5);
 }
 
 .savings {
-    background-color: rgb(16, 250, 16);
+    background-color: rgba(128, 253, 128, 0.5);
 }
 
 /****************************** FOOTER BUTTONS *****************/
@@ -106,16 +115,7 @@ footer {
     padding-bottom: 5%;
 }
 
-.add {
-    width: 20%;
-    padding: 5px;
-    font-family: 'Quicksand', sans-serif;    
-    background-color: #10B6F4;
-    color: white;
-    border: none;
-    border-radius: 3px;
-}
- .filterTransactionButton {
+.add, .filterTransactionButton {
     width: 20%;
     padding: 5px;
     font-family: 'Quicksand', sans-serif;
@@ -129,16 +129,18 @@ footer {
     /* margin-top: 45px; */
     padding-bottom: 10px;
 }
+
 .detailedView {
     display: flex;
     justify-content: space-evenly;
     align-items: center;
-    margin-bottom: 5px;
 }
+
 .icons {
     width: 30px;
     height: 30px;
     color: black;
+    margin: 5px;
 }
 
 /************************* POPUP FORM TO ADD PURCHASE *******************/
@@ -147,7 +149,7 @@ footer {
 }
 
 .popupFormContainer{    
-    background-color: gray; 
+    /* background-color: gray;  */
     padding: 20px;
 }
 
