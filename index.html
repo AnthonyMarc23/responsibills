@@ -57,39 +57,18 @@
       <div class="remainingBudgetContainer">
         <p class="circleButton"></p>
       </div>
-
-      <!--START POPUP FORM TO ADD PURCHASE -->
-      <div class="popupFormContainer hidden">
-        <div class="popupFormContent">
-          <i id = "popUpClose" class="material-icons">clear</i>
-          <h3 class="addPurchase">Add Purchase</h3>
-          <select class="popupStyling" id="item_category" name="expenseCategoryList">
-            <option value="select">Select</option>
-            <option value="bills">Bills</option>
-            <option value="shopping">Shopping</option>
-            <option value="fun">Fun</option>
-            <option value="food">Food</option>
-            <option value="savings">Savings</option>
-          </select>
-          <input class="popupStyling" id="item_name" type="text" placeholder="Item">
-          <input class="popupStyling" id="item_price" type="text" placeholder="$">
-          <button class="popupStyling" id="addTransactionButton" class="submit" type="button">Add</button>
-        </div>
-      </div> <!-- END POPUP FORM TO ADD PURCHASE-->
-
     </div>
 
     <!-- Detailed View Section -->
     <div class="detailedViewWrapper">
       <h3>Weekly Expenses</h3>
-
     </div>
     <!-- End detailedViewWrapper-->
 
     <!-- START ADD AND FILTER BUTTON-->
     <footer>
-      <button id="filterTransactionButton" onclick="openFilterPopUp();" type="button">Filter</button>
-      <button class="add" type="button">Add</button>
+      <button class="filterTransactionButton" onclick="$('#filterPopUp').modal('show');" type="button">Filter</button>
+      <button class="add" type="button" onclick="$('#addTransactionPopUp').modal('show');">Add</button>
     </footer>
     <!-- END ADD AND FILTER BUTTON-->
 
@@ -97,18 +76,17 @@
  <!--closing whitewraper -->
 </div>
 
-
-<div id="filterPopUp"class="modal" tabindex="-1" role="dialog">
+<!-- BOOTSTRAP MODAL POPUP FOR FILTER -->
+<div id="filterPopUp" class="modal" tabindex="-1" role="dialog">
   <div class="modal-dialog" role="document">
     <div class="modal-content">
       <div class="modal-header">
-        <h5 class="modal-title">Filter by Category</h5>
+        <h5 class="modal-title">Filter Options</h5>
         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
           <span aria-hidden="true">&times;</span>
         </button>
       </div>
       <div class="modal-body">
-        <h3>Filter Options</h3>
         <section id="filterPopUpSectionOptions">
 
         </section>
@@ -117,9 +95,57 @@
   </div>
 </div>
 
-   
+<!-- BOOTSTRAP MODAL POPUP FOR ADDING A TRANSACTION -->
+<div id="addTransactionPopUp"class="modal" tabindex="-1" role="dialog">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">Add a Transaction</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <select class="custom-select popupStyling" id="item_category" name="expenseCategoryList">
+          <option value="">Select</option>
+          <option value="Bills">Bills</option>
+          <option value="Shopping">Shopping</option>
+          <option value="Fun">Fun</option>
+          <option value="Food">Food</option>
+          <option value="Savings">Savings</option>
+        </select>
+        <input class="popupStyling" id="item_name" type="text" placeholder="Item">
+        <input class="popupStyling" id="item_price" type="text" placeholder="$">
+        
+      </div>
+      <div class="modal-footer">
+        <button type="button" id="addTransactionButton" onclick="currentUser.addTransaction();" class="btn btn-primary popupStyling">Add Transaction</button>
+      </div>
+    </div>
+  </div>
+</div>
 
 
+<!-- BOOTSTRAP MODAL POPUP FOR BUDGET -->
+<div id="enterBudgetPopUp" class="modal popupFormContainer" tabindex="-1" role="dialog">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">Enter your Budget for the Week!</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <input type="text" id="weeklyBudget" placeholder="$">
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary" onclick="currentUser.setBudget();">Save changes</button>
+      </div>
+    </div>
+  </div>
+</div>
 
 
 
