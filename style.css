@@ -107,18 +107,20 @@ footer {
 }
 
 .add {
-    width: 30%;
+    width: 20%;
     padding: 5px;
     font-family: 'Quicksand', sans-serif;    
     background-color: #10B6F4;
+    color: white;
     border: none;
     border-radius: 3px;
 }
  .filterTransactionButton {
-    width: 30%;
+    width: 20%;
     padding: 5px;
     font-family: 'Quicksand', sans-serif;
-    background-color: #C600FF;
+    background-color:#10B6F4;
+    color:whitesmoke;
     border: none;
     border-radius: 3px;
  }
@@ -211,7 +213,24 @@ footer {
     border: 2px blue solid;
 } 
 
+.btn-primary{
+    background-color:#5CF64A;
+    color:black;
+  
 
+}
+
+.btn-secondary{
+    background-color:red;
+    color: black;
+    
+
+
+}
+
+#weeklyBudget{
+ background-color: #5CF64A
+}
 /* input {
     margin: 10px;
 }
