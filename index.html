@@ -53,16 +53,15 @@
 
     <h1>Responsi<span class="logoBills">Bills</span></h1>
 
-    <div class="budgetFormContainer">
+    <div class="budgetFormContainer" onclick="$('#enterBudgetPopUp').modal('show');">
       <div class="remainingBudgetContainer">
         <p class="circleButton"></p>
       </div>
     </div>
 
     <!-- Detailed View Section -->
-    <div class="detailedViewWrapper">
-      <h3>Weekly Expenses</h3>
-    </div>
+    <h3>Weekly Expenses</h3>
+    <div class="detailedViewWrapper"></div>
     <!-- End detailedViewWrapper-->
 
     <!-- START ADD AND FILTER BUTTON-->
@@ -79,7 +78,7 @@
 <!-- BOOTSTRAP MODAL POPUP FOR FILTER -->
 <div id="filterPopUp" class="modal" tabindex="-1" role="dialog">
   <div class="modal-dialog" role="document">
-    <div class="modal-content">
+    <div class="modal-content popupFormContainer">
       <div class="modal-header">
         <h5 class="modal-title">Filter Options</h5>
         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
@@ -98,7 +97,7 @@
 <!-- BOOTSTRAP MODAL POPUP FOR ADDING A TRANSACTION -->
 <div id="addTransactionPopUp"class="modal" tabindex="-1" role="dialog">
   <div class="modal-dialog" role="document">
-    <div class="modal-content">
+    <div class="modal-content popupFormContainer">
       <div class="modal-header">
         <h5 class="modal-title">Add a Transaction</h5>
         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
@@ -109,7 +108,7 @@
         <select class="custom-select popupStyling" id="item_category" name="expenseCategoryList">
           <option value="">Select</option>
           <option value="Bills">Bills</option>
-          <option value="Shopping">Shopping</option>
+          <option value="Fashion">Fashion</option>
           <option value="Fun">Fun</option>
           <option value="Food">Food</option>
           <option value="Savings">Savings</option>
@@ -127,9 +126,9 @@
 
 
 <!-- BOOTSTRAP MODAL POPUP FOR BUDGET -->
-<div id="enterBudgetPopUp" class="modal popupFormContainer" tabindex="-1" role="dialog">
+<div id="enterBudgetPopUp" class="modal" tabindex="-1" role="dialog">
   <div class="modal-dialog" role="document">
-    <div class="modal-content">
+    <div class="modal-content popupFormContainer">
       <div class="modal-header">
         <h5 class="modal-title">Enter your Budget for the Week!</h5>
         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
