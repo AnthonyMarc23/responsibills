@@ -24,7 +24,7 @@ body {
 }
 h1 {
     text-align: center;
-    font-family: 'Luckiest Guy', cursive;
+    font-family: 'Pangolin', cursive;
     font-size: 35px;
     margin-top: 15px;
     
@@ -35,7 +35,7 @@ h1 {
 
 .outerWhiteWraper h3 {
     text-align: center;
-    font-family: 'Luckiest Guy', cursive;
+    font-family: 'Permanent Marker', cursive;
     font-size: 28px;
     padding-bottom:15px;
     color: #10B6F4;
@@ -91,7 +91,7 @@ h1 {
 }
 
 .fun {
-    background-color: rgb(9, 81, 236);
+    background-color:#01dddd;
 }
 
 .savings {
