@@ -52,11 +52,11 @@
     <!-- End Navbar from Bootstrap-->
 
     <h1>Responsi<span class="logoBills">Bills</span></h1>
-    <h6>Helping Young Adults to Budget Their Life!</h6>
+    <h6>Helping Young Teens to Budget Their Life!</h6>
 
     <div class="budgetFormContainer" onclick="$('#enterBudgetPopUp').modal('show');">
       <div class="remainingBudgetContainer">
-        <p class="circleButton">Click Here To Get Started!</p>
+        <p class="circleButton" id="circleButtonId">Click Here To Get Started!</p>
       </div>
     </div>
 
@@ -124,6 +124,24 @@
     </div>
   </div>
 </div>
+
+<!--BOOTSTRAP MODAL POPUP FOR DISPLAYING OUT OF MONEY-->
+<div id="outOfMoneyPopup"class="modal fade" tabindex="-1" role="dialog">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content popupFormContainer">
+      <div class="modal-header">
+        <h5 class="modal-title">WARNING!!</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">          
+        <h4>You are out of Money, you better ask to do more chores.</h4>
+      </div>     
+    </div>
+  </div>
+</div>
+
 
 
 <!-- BOOTSTRAP MODAL POPUP FOR BUDGET -->

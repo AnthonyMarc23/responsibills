@@ -5,6 +5,7 @@
 // set up our constructor with some information about our user. transactions will be an
 // array where we are saving every transaction we make, budget will be the actual budget
 // the user has set, and the filter will be used for all of our filtering on our categories.
+
 class user {
   constructor() {
     this.transactions = [];
@@ -29,6 +30,7 @@ class user {
       itemPrice: parseFloat($("#item_price").val())
     };
 
+    
     // This functioning tests to see if any of the values are blank, and if so, return
     // so that we don't get any blank entries.
     if (transaction.itemCategory === "" || transaction.itemName === "" || isNaN(transaction.itemPrice)) {
@@ -115,6 +117,8 @@ class user {
     return this.transactions.reduce((value, transaction) => value - transaction.itemPrice, this.budget); 
   }
 
+
+
   // Our buildCategories() method dynamically builds the filter popup every time it is
   // opened. We don't necessarily need to do this, but if we ever add more categories,
   // we only need to add them in one place, and that is our user class constructor. 
@@ -178,7 +182,11 @@ class user {
   // the displayBudget() function writes the budget to the circleButton Div and is called
   // each time a new transaction is added to keep the budget updated.
   displayBudget() {
-    $(".circleButton").html(`Budget:<br>$${this.getBudget()}`);
+    let remainingBudget = this.getBudget();
+    checkPositiveBalance(remainingBudget)
+    console.log(this.getBudget());
+    //targeted ID instead of class because I changed the background color by class when budget is 0 or less
+    $("#circleButtonId").html(`Budget:<br>$${this.getBudget()}`);
   }
 } //closes class user block 
 
@@ -214,6 +222,24 @@ $(document).ready(() => {
 function showPopUp(popUpId) {
   $("#" + popUpId).modal("show");
   $("html, body").animate({ scrollTop: "0px" });
+}
+
+// FUNCTION TO CHECK POSITIVE BALANCE, CHANGE BACKGROUND COLOR AND SWAP POPUP TO ALERT USER OUT OF MONEY
+function checkPositiveBalance(remainingBudget){
+  if(remainingBudget <= 0){
+    console.log("You're out of money fool!");
+    setToOutOfMoney();
+    swapModals();
+  }
+}
+
+function setToOutOfMoney(){
+  $("#circleButtonId").removeClass("circleButton").addClass("circleRedButton");  
+}
+
+function swapModals(){ 
+  $('#addTransactionPopUp').modal('hide');
+  $('#outOfMoneyPopup').modal('show');
 }
 
 
