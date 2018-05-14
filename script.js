@@ -96,6 +96,7 @@ class user {
     this.transactions = [];
     this.budget = parseFloat($("#weeklyBudget").val());
     $('#enterBudgetPopUp').modal('hide');
+    $("#circleButtonId").removeClass("circleRedButton").addClass("circleButton");
     this.displayBudget();
     this.displayItems();
   }
@@ -182,9 +183,9 @@ class user {
   // the displayBudget() function writes the budget to the circleButton Div and is called
   // each time a new transaction is added to keep the budget updated.
   displayBudget() {
-    let remainingBudget = this.getBudget();
-    checkPositiveBalance(remainingBudget)
-    console.log(this.getBudget());
+    // let remainingBudget = this.getBudget();
+    checkPositiveBalance(this.getBudget());
+    // console.log(this.getBudget());
     //targeted ID instead of class because I changed the background color by class when budget is 0 or less
     $("#circleButtonId").html(`Budget:<br>$${this.getBudget()}`);
   }
@@ -193,11 +194,17 @@ class user {
 // this is the jQuery preloader.
 $(document).ready(() => {
 
+  // Enable those Tooltips!
+  $(function () {
+    $('[data-toggle="tooltip"]').tooltip()
+  })
+
   // Create a global variable called currentUser (We use "window." to take it out of
   // the scope of the document.ready function).
   window.currentUser = new user();
   
-  //pop up the budget window first thing on load!
+  // pop up the budget window first thing on load! EDIT: Commented out so people can see
+  // what the page is about.
   // showPopUp("enterBudgetPopUp");
 
   // run the buildCategories function.
@@ -218,6 +225,7 @@ $(document).ready(() => {
 
 });
 
+
 // Just a small function to scroll the page to the top when they click on a modal popup
 function showPopUp(popUpId) {
   $("#" + popUpId).modal("show");
@@ -227,7 +235,7 @@ function showPopUp(popUpId) {
 // FUNCTION TO CHECK POSITIVE BALANCE, CHANGE BACKGROUND COLOR AND SWAP POPUP TO ALERT USER OUT OF MONEY
 function checkPositiveBalance(remainingBudget){
   if(remainingBudget <= 0){
-    console.log("You're out of money fool!");
+    // console.log("You're out of money fool!");
     setToOutOfMoney();
     swapModals();
   }

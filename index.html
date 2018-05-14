@@ -56,7 +56,7 @@
 
     <div class="budgetFormContainer" onclick="$('#enterBudgetPopUp').modal('show');">
       <div class="remainingBudgetContainer">
-        <p class="circleButton" id="circleButtonId">Click Here To Get Started!</p>
+        <p class="circleButton" id="circleButtonId" data-toggle="tooltip" data-placement="top" title="Start out by entering your budget for the week here!">Click To Get Started!</p>
       </div>
     </div>
 
@@ -67,8 +67,8 @@
 
     <!-- START ADD AND FILTER BUTTON-->
     <footer>
-      <button class="filterTransactionButton" onclick="$('#filterPopUp').modal('show');" type="button">Filter</button>
-      <button class="add" type="button" onclick="$('#addTransactionPopUp').modal('show');">Add</button>
+      <button class="filterTransactionButton" onclick="$('#filterPopUp').modal('show');" type="button" data-toggle="tooltip" data-placement="top" title="Click here to filter your purchases by category.">Filter Purchases</button>
+      <button class="add" type="button" onclick="$('#addTransactionPopUp').modal('show');" data-toggle="tooltip" data-placement="top" title="Click here to add a purchase you made recently.">Add Purchase</button>
     </footer>
     <!-- END ADD AND FILTER BUTTON-->
 
@@ -126,7 +126,7 @@
 </div>
 
 <!--BOOTSTRAP MODAL POPUP FOR DISPLAYING OUT OF MONEY-->
-<div id="outOfMoneyPopup"class="modal fade" tabindex="-1" role="dialog">
+<div id="outOfMoneyPopup" class="modal fade" tabindex="-1" role="dialog">
   <div class="modal-dialog" role="document">
     <div class="modal-content popupFormContainer">
       <div class="modal-header">
